@@ -1,0 +1,154 @@
+*{
+    font-family: monospace;
+}
+body{
+    background:black;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: white;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.itemMenu{
+    display: inline-flex;
+    margin-left: 15%;
+    margin-top: 2%;
+}
+
+.itemMenu a{
+    text-decoration: none;
+    transition: 0.2s step-end;
+    opacity: 0.5;
+    color: white;
+}
+
+.itemMenu a:hover{
+    opacity: 1;
+}
+
+.parte1{
+    display: flex;
+    margin-top: 20px;
+    text-align: center;
+    transition: 0.2s ease;
+}
+
+.imgSistema{
+    width: 40%;
+    height: 300px;
+    background-image: url('../img/sistemaSolar2.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0;
+}
+
+.descSistema{
+    width: 60%;
+    height: 300px;
+    margin: 0;
+    background-color: rgb(5, 5, 5);
+}
+
+.descSistema p {
+    width: 70%;
+    margin-left: 12%;
+}
+
+.planeta{
+    width: 11.5%;
+    height: 70px;
+    border: 1px solid white;
+    display: inline-flex;
+    margin-top: 4%;
+    margin-left: 0.2%;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+    color: white;
+}
+
+.imgPlaneta{
+    width: 50%;
+}
+
+#planeta1{
+    background-color: rgba(255, 217, 0, 0.5);
+    border: gold 2px solid;
+}
+
+#planeta1:hover{
+    background-color: black;
+}
+
+#planeta2{
+    background-color: rgba(163, 88, 34, 0.5);
+    border: saddlebrown 2px solid;
+}
+
+#planeta2:hover{
+    background-color: black;
+}
+
+#planeta3{
+    background-color: rgba(17, 255, 255, 0.5);
+    border: rgb(0, 129, 17) 2px solid;
+}
+
+#planeta3:hover{
+    background-color: black;
+}
+
+#planeta4{
+    background-color: rgba(255, 15, 15, 0.5);
+    border: brown 2px solid;
+}
+
+#planeta4:hover{
+    background-color: black;
+}
+
+#planeta5{
+    background-color:rgb(252, 186, 65);
+    border: chocolate 2px solid;
+}
+
+#planeta5:hover{
+    background-color: black;
+}
+
+#planeta6{
+    background-color: rgba(210, 105, 30, 0.5);
+    border: rgb(245, 222, 179) 2px solid;
+}
+
+#planeta6:hover{
+    background-color: black;
+}
+
+#imgplaneta6{
+    width: 65%;
+}
+
+#planeta7{
+    background-color: rgb(65, 65, 253);
+    border: blue 2px solid;
+}
+
+#planeta7:hover{
+    background-color: black;
+}
+
+#planeta8{
+    background-color: rgba(0, 0, 255, 0.644);
+    border:  rgb(65, 65, 253) 2px solid;
+}
+
+#planeta8:hover{
+    background-color: black;
+}

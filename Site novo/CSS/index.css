@@ -1,0 +1,141 @@
+*{
+    font-family: monospace;
+    color: white;
+}
+body{
+    background:black;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+header{
+    width: 100%;
+    height: 500px;
+    background-image: url('../img/sistemaSolar.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(25%);
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.itemMenu{
+    display: inline-flex;
+    float: right;
+    margin-right: 40px;
+    margin-top: 2%;
+}
+
+.itemMenu a{
+    text-decoration: none;
+    transition: 0.2s ease-out;
+    cursor: pointer;
+}
+
+.itemMenu a:hover{
+    font-size: 16px;
+}
+
+.headerDesc{
+    margin-left: 28%;
+    position: relative;
+    width: 43%;
+    animation: mymove 3.3s infinite ease;
+    transition: 1s ease-in;
+}
+
+@keyframes mymove {
+    0%   {top: 0px;}
+    25%  {top: 20px;}
+    50%  {top: 0px;}
+    75%  {top: 20px;}
+    100% {top: 0px;}
+}
+
+.headerDesc h1{
+    font-size: 34px;
+    margin-top: 0%;
+    padding-top: 15%;
+}
+
+.headerDesc p{
+    font-size: 16px;
+    text-align: center;
+    margin-left: -13%;
+}
+/* FIM CABEÇALHO */
+.descSobre , .imgSobre{
+    height: 350px;
+    float: left;
+    text-align: center;
+    transition: ease-in;
+}
+
+.imgSobre{
+    width: 60%;
+}
+
+.descSobre{
+    width: 40%;
+}
+
+.imgSobre{
+    background-image: url('../img/nave.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.descSobre h2{
+    width: 95%;
+    height: 24px;
+    margin-left: 5%;
+}
+.descSobre p{
+    width: 90%;
+    height: 46%;
+    margin-top: 25%;
+    margin-left: 10px;
+}
+
+.teste{
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.856);
+    position: fixed;
+}
+
+.telaLogin{
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
+    margin-top: -30%;
+    background-color: black;
+    border: 1px solid yellow;
+    position: absolute;
+    display: none;
+    transition: 4s ease;
+}
+
+.login{
+    color: black;
+}
+
+.cadastro{
+    color: black;
+}
+
+footer{
+    width: 100%;
+    height: 40%;
+    text-align: center;
+}
+
+footer p{
+    margin-top: 10px;
+}
