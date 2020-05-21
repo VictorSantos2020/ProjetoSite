@@ -111,13 +111,13 @@ ul{
 }
 
 .telaLogin{
-    width: 80%;
+    width: 40%;
     height: 80%;
-    margin-left: 10%;
+    margin-left: 30%;
     margin-top: -30%;
     background-color: black;
     border: 1px solid yellow;
-    border-radius: 25px 75px;
+    border-radius: 25px;
     position: absolute;
     display: none;
     transition: 4s ease;
@@ -135,11 +135,16 @@ ul{
 }
 
 #btnCadastra{
-    border-radius: 0px 75px 0px 0px;
+    border-right: 2px solid white;
+}
+
+#btnFechar{
+    border-radius: 0px 25px 0px 0px;
+    width: 7%;
 }
 
 .btnEscolha{
-    width: 50%;
+    width: 47%;
     height: 65px;
     color: white;
     background-color: black;
@@ -151,6 +156,7 @@ ul{
 .btnEscolha:hover{
     border-bottom: 3px solid white;
     font-size: 16px;
+    background-color: rgb(20, 20, 20); 
 }
 
 .login{

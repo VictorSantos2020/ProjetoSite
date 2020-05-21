@@ -35,9 +35,10 @@
         <div class="btnEscolhar">
             <button class="btnEscolha" id="btnLogin">ENTRAR</button>
             <button class="btnEscolha" id="btnCadastra">CADASTRO</button>
+            <button class="btnEscolha" id="btnFechar" onclick="MostrarLogin()">X</button>
         </div>
-        <div class="login">aaaaaaa</div>
-        <div class="cadastro">aaaa</div>
+        <div class="login"></div>
+        <div class="cadastro"></div>
     </div>
 
     <footer>
@@ -53,6 +54,7 @@
 var x = document.getElementById("telaLogin");
 var y = document.getElementById("teste");
 var z = document.getElementById('headerPricipal');
+x.style.display = 'none';
 
 function MostrarLogin(){
     if (x.style.display == 'none') {
