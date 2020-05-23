@@ -33,12 +33,22 @@
     </div>
     <div id="telaLogin" class="telaLogin">
         <div class="btnEscolhar">
-            <button class="btnEscolha" id="btnLogin">ENTRAR</button>
-            <button class="btnEscolha" id="btnCadastra">CADASTRO</button>
+            <button class="btnEscolha" id="btnLogin" onclick="MudarLogin()">ENTRAR</button>
+            <button class="btnEscolha" id="btnCadastra" onclick="MudarCadastro()">CADASTRO</button>
             <button class="btnEscolha" id="btnFechar" onclick="MostrarLogin()">X</button>
         </div>
-        <div class="login"></div>
-        <div class="cadastro"></div>
+        <div class="login" id="Login">
+            <h2 class="tituloLogin">NOME DE USUARIO</h2>
+            <input type="text" id="txtUser" class="txtLogin">
+            <h2 class="tituloLogin">SENHA</h2>
+            <input type="password" id="txtSenha" class="txtLogin">
+            <h4 class="erro" id="erro">Nome e/ou Senha incorreto!</h4>
+            <br>
+            <button onclick="Entrar()" class="btnEntrar" id="btnEntrar">ENTRAR</button>
+        </div>
+        <div class="cadastro" id="Cadastro">
+
+        </div>
     </div>
 
     <footer>
@@ -56,15 +66,55 @@ var y = document.getElementById("teste");
 var z = document.getElementById('headerPricipal');
 x.style.display = 'none';
 
+var a = document.getElementById('Login');
+var b = document.getElementById('Cadastro');
+b.style.display = 'block';
+document.getElementById('btnLogin').style.background = 'rgb(20, 20, 20)';
+
+var c = document.getElementById('erro');
+c.style.display = 'none';
+
+function MudarCadastro() {
+    b.style.display = 'block';
+    a.style.display = 'none';
+    c.style.display = 'none';
+    document.getElementById('btnLogin').style.background = 'black';
+    document.getElementById('btnCadastra').style.background = 'rgb(20, 20, 20)';
+}
+
+function MudarLogin() {
+    a.style.display = 'block';
+    b.style.display = 'none';
+    document.getElementById('btnCadastra').style.background = 'black';
+    document.getElementById('btnLogin').style.background = 'rgb(20, 20, 20)';
+    document.getElementById('btnEntrar').style.marginTop = '5%';
+
+}
+
+function Entrar() {
+    var user = txtUser.value;
+    var senha = txtSenha.value;
+
+    if (user == "Vitu" && senha == "1234") {
+        window.location.href = "sisolar.html";        
+    } else {
+        c.style.display = 'block';
+        document.getElementById('btnEntrar').style.marginTop = '0%';
+    }
+}
+
 function MostrarLogin(){
+    document.getElementById('btnEntrar').style.marginTop = '5%';
     if (x.style.display == 'none') {
       x.style.display = 'block';
       y.style.visibility = 'visible';
       z.style.opacity = '0.3';
+      c.style.display = 'none';
     } else {
       x.style.display = 'none';
       y.style.visibility = 'hidden';
       z.style.opacity = '1';
+      c.style.display = 'none';
     }
 }
 
