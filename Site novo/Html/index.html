@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="../CSS/index.css">
-        <title>HOME</title>
-    </head>
-    
-    <body>
-        <div class="teste" id="teste"></div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../CSS/index.css">
+    <title>HOME</title>
+</head>
+
+<body>
+    <div class="teste" id="teste"></div>
     <header id="headerPricipal">
         <ul>
             <li class="itemMenu"><a onclick="MostrarLogin()" id="aMenu">ENTRAR/CADASTRAR</a></li>
@@ -25,7 +25,7 @@
         <div class="imgSobre"></div>
         <div class="descSobre" id="descSobre1">
             <h2>PLANETAS, ESTRELAS, E OUTROS</h2>
-            <p>Esse projeto foi criado por mim (Victor G. Santos) para ensinar/mostrar sobre o sistema solar e seus
+            <p>O projeto foi criado por Victor G. Santos para todos aprenderem sobre o sistema solar e seus
                 componentes,
                 Vamos fazer isso da forma mais divertida e simples.
             </p>
@@ -44,10 +44,26 @@
             <input type="password" id="txtSenha" class="txtLogin">
             <h4 class="erro" id="erro">Nome e/ou Senha incorreto!</h4>
             <br>
-            <button onclick="Entrar()" class="btnEntrar" id="btnEntrar">ENTRAR</button>
+            <button onclick="Entrar()" onkeypress="" class="btnEntrar" id="btnEntrar">ENTRAR</button>
         </div>
         <div class="cadastro" id="Cadastro">
-
+            <h2 class="tituloCadastro">NOME COMPLETO</h2>
+            <input type="text" id="txtNomeCompleto" class="txtLogin">
+            <h2 class="tituloCadastro">NOME DE USUARIO</h2>
+            <input type="text" id="txtNomeUser" class="txtLogin">
+            <h2 class="tituloCadastro">EMAIL</h2>
+            <input type="email" id="txtEmail" class="txtLogin">
+            <h2 class="tituloCadastro">SENHA</h2>
+            <input type="password" id="txtCriarSenha" onkeydown="ValidarSenha()" class="txtLogin" onclick="MostrarPopUp()">
+            <span class="pop-up" id="pop-up">A SENHA DEVE CONTER: <br>
+                NO MINIMO: <br><br>
+                <span class="tarefas" id="tarefa1">6 caracteres.</span>  <br>
+                <span class="tarefas" id="tarefa2">1 letra maiuscula.</span>  <br>
+                <span class="tarefas" id="tarefa3">1 numero.</span>  <br>
+                <span class="tarefas" id="tarefa4">1 caracter especial.</span> 
+            </span>
+            <br>
+            <button onclick="Validar()" class="btnEntrar" id="btnCadastro">CONFIRMAR</button>
         </div>
     </div>
 
@@ -55,71 +71,92 @@
         <p><i>© Victor G. Santos 2020</i></p>
     </footer>
 </body>
+
 </html>
 <!-- 
     * Mudar a variavel y(mudar o id teste para outra coisa)
     ** Colocar um botão de fechar dentro da tela de login
  -->
 <script>
-var x = document.getElementById("telaLogin");
-var y = document.getElementById("teste");
-var z = document.getElementById('headerPricipal');
-x.style.display = 'none';
+    var x = document.getElementById("telaLogin");
+    var y = document.getElementById("teste");
+    var z = document.getElementById('headerPricipal');
+    x.style.display = 'none';
 
-var a = document.getElementById('Login');
-var b = document.getElementById('Cadastro');
-b.style.display = 'block';
-document.getElementById('btnLogin').style.background = 'rgb(20, 20, 20)';
-
-var c = document.getElementById('erro');
-c.style.display = 'none';
-
-function MudarCadastro() {
-    b.style.display = 'block';
-    a.style.display = 'none';
-    c.style.display = 'none';
-    document.getElementById('btnLogin').style.background = 'black';
-    document.getElementById('btnCadastra').style.background = 'rgb(20, 20, 20)';
-}
-
-function MudarLogin() {
-    a.style.display = 'block';
+    var a = document.getElementById('Login');
+    var b = document.getElementById('Cadastro');
     b.style.display = 'none';
-    document.getElementById('btnCadastra').style.background = 'black';
     document.getElementById('btnLogin').style.background = 'rgb(20, 20, 20)';
-    document.getElementById('btnEntrar').style.marginTop = '5%';
 
-}
+    var c = document.getElementById('erro');
+    c.style.display = 'none';
 
-function Entrar() {
-    var user = txtUser.value;
-    var senha = txtSenha.value;
-
-    if (user == "Vitu" && senha == "1234") {
-        window.location.href = "sisolar.html";        
-    } else {
-        c.style.display = 'block';
-        document.getElementById('btnEntrar').style.marginTop = '0%';
+    function MudarCadastro() {
+        b.style.display = 'block';
+        a.style.display = 'none';
+        c.style.display = 'none';
+        document.getElementById('btnLogin').style.background = 'black';
+        document.getElementById('btnCadastra').style.background = 'rgb(20, 20, 20)';
     }
-}
 
-function MostrarLogin(){
-    document.getElementById('btnEntrar').style.marginTop = '5%';
-    if (x.style.display == 'none') {
-      x.style.display = 'block';
-      y.style.visibility = 'visible';
-      z.style.opacity = '0.3';
-      c.style.display = 'none';
-    } else {
-      x.style.display = 'none';
-      y.style.visibility = 'hidden';
-      z.style.opacity = '1';
-      c.style.display = 'none';
+    function MudarLogin() {
+        a.style.display = 'block';
+        b.style.display = 'none';
+        document.getElementById('btnCadastra').style.background = 'black';
+        document.getElementById('btnLogin').style.background = 'rgb(20, 20, 20)';
+        document.getElementById('btnEntrar').style.marginTop = '5%';
+
     }
-}
 
-function Fecharlogin() {
-    x.style.visibility = 'hidden';
-}
+    function Entrar() {
+        var user = txtUser.value;
+        var senha = txtSenha.value;
+        
+            if (user == "Vitu" && senha == "1234") {
+                window.location.href = "sisolar.html";
+            } else {
+                c.style.display = 'block';
+                document.getElementById('btnEntrar').style.marginTop = '0%';
+            }    
+    }
 
+    function MostrarLogin() {
+        document.getElementById('btnEntrar').style.marginTop = '5%';
+        if (x.style.display == 'none') {
+            x.style.display = 'block';
+            y.style.visibility = 'visible';
+            z.style.opacity = '0.3';
+            c.style.display = 'none';
+        } else {
+            x.style.display = 'none';
+            y.style.visibility = 'hidden';
+            z.style.opacity = '1';
+            c.style.display = 'none';
+        }
+    }
+
+    function Fecharlogin() {
+        x.style.visibility = 'hidden';
+    }
+
+    // var popupBox = document.getElementById("pop-up");
+
+    // function MostrarPopUp() {
+    //     if (popupBox.style.display === 'block') {
+    //         popupBox.style.display = 'none';
+    //     } else {
+    //         popupBox.style.display = 'block';
+    //     }
+    // }
+
+    function ValidarSenha() {
+        var Verificar = txtCriarSenha.value;
+        
+            if (Verificar.length >= 6) {
+                document.getElementById('tarefa1').style.color = 'green';
+            }
+            else{
+                document.getElementById('tarefa1').style.color = 'red';
+            }
+    }
 </script>

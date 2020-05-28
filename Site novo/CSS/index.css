@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap');
+
 *{
-    font-family: monospace;
+    font-family: 'IBM Plex Mono', monospace;
     color: white;
+    outline:none;
 }
 body{
     background:black;
@@ -35,10 +38,12 @@ ul{
     text-decoration: none;
     transition: 0.2s ease-out;
     cursor: pointer;
+    font-size: 16px;
+    opacity: 0.65;
 }
 
 .itemMenu a:hover{
-    font-size: 16px;
+    opacity: 1;
 }
 
 .headerDesc{
@@ -120,8 +125,13 @@ ul{
     border-radius: 25px;
     position: absolute;
     display: none;
-    transition: 4s ease;
+    animation: Mostrar 1.3s;
 }
+
+@keyframes Mostrar {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
 
 .btnEscolhar{
     display: inline-flex;
@@ -167,7 +177,7 @@ ul{
 .btnEntrar{
     margin-top: 5%;
     background-color: rgba(255, 255, 0, 0.6);
-    color: black;
+    color: rgb(0, 0, 0);
     width: 25%;
     height: 40px;
     border: yellow 3px solid;
@@ -188,11 +198,34 @@ ul{
     background-color: black;
     border: transparent;
     border-bottom: 2px white solid;
+    outline:none;
 }
 
 .cadastro{
+    height: 60%;
+    text-align: center;
     color: black;
     display: none;
+}
+
+.pop-up{
+    background-color: rgb(0, 0, 0);
+    padding: 13px 17px;
+    color: red;
+    border-radius: 8px;
+    position: absolute;
+    width: 230px;
+    font-size: 17px;
+    right: 125%;
+    top: -65px;
+}
+
+.tarefas{
+    color: red;
+}
+
+.tituloCadastro{
+    margin-top: 2%;
 }
 
 .erro{
