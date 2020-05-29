@@ -54,13 +54,13 @@
             <h2 class="tituloCadastro">EMAIL</h2>
             <input type="email" id="txtEmail" class="txtLogin">
             <h2 class="tituloCadastro">SENHA</h2>
-            <input type="password" id="txtCriarSenha" onkeydown="ValidarSenha()" class="txtLogin" onclick="MostrarPopUp()">
+            <input type="password" id="txtCriarSenha" onkeyup="ValidarSenha()" class="txtLogin">
             <span class="pop-up" id="pop-up">A SENHA DEVE CONTER: <br>
                 NO MINIMO: <br><br>
-                <span class="tarefas" id="tarefa1">6 caracteres.</span>  <br>
-                <span class="tarefas" id="tarefa2">1 letra maiuscula.</span>  <br>
-                <span class="tarefas" id="tarefa3">1 numero.</span>  <br>
-                <span class="tarefas" id="tarefa4">1 caracter especial.</span> 
+                <span class="tarefas" id="tarefa1">6 caracteres.</span><br>
+                <span class="tarefas" id="tarefa2">1 letra maiuscula.</span><br>
+                <span class="tarefas" id="tarefa3">1 numero.</span><br>
+                <span class="tarefas" id="tarefa4">1 caracter especial.</span>
             </span>
             <br>
             <button onclick="Validar()" class="btnEntrar" id="btnCadastro">CONFIRMAR</button>
@@ -111,13 +111,13 @@
     function Entrar() {
         var user = txtUser.value;
         var senha = txtSenha.value;
-        
-            if (user == "Vitu" && senha == "1234") {
-                window.location.href = "sisolar.html";
-            } else {
-                c.style.display = 'block';
-                document.getElementById('btnEntrar').style.marginTop = '0%';
-            }    
+
+        if (user == "Vitu" && senha == "1234") {
+            window.location.href = "sisolar.html";
+        } else {
+            c.style.display = 'block';
+            document.getElementById('btnEntrar').style.marginTop = '0%';
+        }
     }
 
     function MostrarLogin() {
@@ -150,13 +150,19 @@
     // }
 
     function ValidarSenha() {
-        var Verificar = txtCriarSenha.value;
-        
-            if (Verificar.length >= 6) {
-                document.getElementById('tarefa1').style.color = 'green';
-            }
-            else{
-                document.getElementById('tarefa1').style.color = 'red';
-            }
+        if (document.getElementById('txtCriarSenha').value.length >= 6) {
+            document.getElementById('tarefa1').style.color = 'green';
+        }
+        else {
+            document.getElementById('tarefa1').style.color = 'red';
+        }
+
+        var i = document.getElementById('txtCriarSenha').value;
+        if (i.indexOf(/([1-9]+)\1{1,}/) >= 0) {
+            document.getElementById('tarefa3').style.color = 'green';
+        }
+        else {
+            document.getElementById('tarefa3').style.color = 'red';
+        }
     }
 </script>
