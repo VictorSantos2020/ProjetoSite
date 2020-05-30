@@ -12,12 +12,18 @@
 <body>
     <header>
         <ul>
+            <li class="itemMenu"><a onclick="AbrirMenu()" id="aMenu">MENU</a></li>
             <li class="itemMenu"><a href="./sisolar.html">NOSSO SISTEMA SOLAR</a></li>
             <li class="itemMenu"><a href="">CURIOSIDADES</a></li>
             <li class="itemMenu"><a href="./index.html">SOBRE O PROJETO</a></li>
             <li class="itemMenu"><a href="">OUTROS</a></li>
         </ul>
     </header>
+    <div class="Menu" id="Menu">
+        <div class="botaoMenu">CONQUISTAS</div>
+        <div class="botaoMenu">VER PERFIL</div>
+        <div class="botaoMenu">SAIR</div>
+    </div>
     <div class="parte1">
         <div class="descSistema">
             <h2 class="tutloSistema">O SISTEMA SOLAR</h2>
@@ -70,9 +76,24 @@
 
     <div class="parte3">
     </div>
+
     <footer>
 
     </footer>
 </body>
 
 </html>
+
+<script>
+    var verMenu = document.getElementById("Menu");
+    verMenu.style.display = 'none';
+
+    function AbrirMenu() {
+        if (verMenu.style.display === 'block') {
+            verMenu.style.display = 'none';
+
+        } else {
+            verMenu.style.display = 'block';
+        }
+    }
+</script>

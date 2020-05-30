@@ -157,12 +157,25 @@
             document.getElementById('tarefa1').style.color = 'red';
         }
 
-        var i = document.getElementById('txtCriarSenha').value;
-        if (i.indexOf(/([1-9]+)\1{1,}/) >= 0) {
+        var RecebeSenha = document.getElementById('txtCriarSenha').value;
+        var Validar0 = RecebeSenha.indexOf('0') >= 0;
+        var Validar1 = RecebeSenha.indexOf('1') >= 0;
+        var Validar2 = RecebeSenha.indexOf('2') >= 0;
+        var Validar3 = RecebeSenha.indexOf('3') >= 0;
+        var Validar4 = RecebeSenha.indexOf('4') >= 0;
+        var Validar5 = RecebeSenha.indexOf('5') >= 0;
+        var Validar6 = RecebeSenha.indexOf('6') >= 0;
+        var Validar7 = RecebeSenha.indexOf('7') >= 0;
+        var Validar8 = RecebeSenha.indexOf('8') >= 0;
+        var Validar9 = RecebeSenha.indexOf('9') >= 0;
+        if (Validar0 || Validar1 || Validar2 || Validar3 || Validar4 || Validar5 || Validar6 || Validar7 || Validar8 || Validar9) {
             document.getElementById('tarefa3').style.color = 'green';
         }
         else {
             document.getElementById('tarefa3').style.color = 'red';
         }
+
+
+
     }
 </script>
