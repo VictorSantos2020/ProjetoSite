@@ -1,12 +1,12 @@
 *{
     font-family: monospace;
+    color: white;
 }
 body{
     background:black;
     margin: 0;
     padding: 0;
     border: 0;
-    color: white;
 }
 
 ul{
@@ -97,82 +97,29 @@ ul{
     color: white;
 }
 
-.imgPlaneta{
+.CaixaNiveis{
+    width: 99%;
+    height: 400px;
+    border: 1px solid white;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.CaixaQuiz{
+    width: 23%;
+    height: 90%;
+    background: gray;
+    display: inline-block;
+}
+
+.btnResponder{
+    background: black;
     width: 50%;
+    height: 30px;
+    border: none;
+    transition: 0.4s ease-in;
 }
 
-#planeta1{
-    background-color: rgba(255, 217, 0, 0.5);
-    border: gold 2px solid;
-}
-
-#planeta1:hover{
-    background-color: black;
-}
-
-#planeta2{
-    background-color: rgba(163, 88, 34, 0.5);
-    border: saddlebrown 2px solid;
-}
-
-#planeta2:hover{
-    background-color: black;
-}
-
-#planeta3{
-    background-color: rgba(17, 255, 255, 0.5);
-    border: rgb(0, 129, 17) 2px solid;
-}
-
-#planeta3:hover{
-    background-color: black;
-}
-
-#planeta4{
-    background-color: rgba(255, 15, 15, 0.5);
-    border: brown 2px solid;
-}
-
-#planeta4:hover{
-    background-color: black;
-}
-
-#planeta5{
-    background-color:rgb(252, 186, 65);
-    border: chocolate 2px solid;
-}
-
-#planeta5:hover{
-    background-color: black;
-}
-
-#planeta6{
-    background-color: rgba(210, 105, 30, 0.5);
-    border: rgb(245, 222, 179) 2px solid;
-}
-
-#planeta6:hover{
-    background-color: black;
-}
-
-#imgplaneta6{
-    width: 65%;
-}
-
-#planeta7{
-    background-color: rgb(65, 65, 253);
-    border: blue 2px solid;
-}
-
-#planeta7:hover{
-    background-color: black;
-}
-
-#planeta8{
-    background-color: rgba(0, 0, 255, 0.644);
-    border:  rgb(65, 65, 253) 2px solid;
-}
-
-#planeta8:hover{
-    background-color: black;
+.btnResponder:hover{
+    box-shadow: 5px 5px ;
 }
