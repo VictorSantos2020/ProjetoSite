@@ -12,18 +12,11 @@
 <body>
     <header>
         <ul>
-            <li class="itemMenu"><a onclick="AbrirMenu()" id="aMenu">MENU</a></li>
-            <li class="itemMenu"><a href="./sisolar.html">NOSSO SISTEMA SOLAR</a></li>
-            <li class="itemMenu"><a href="">CURIOSIDADES</a></li>
-            <li class="itemMenu"><a href="./index.html">SOBRE O PROJETO</a></li>
-            <li class="itemMenu"><a href="">OUTROS</a></li>
+            <li class="itemMenu"><a href=""></a>ATIVIDADES</li>
+            <li class="itemMenu"><a href="./sisolar.html">PERFIL</a></li>
+            <li class="itemMenu"><a onclick="Sair()">SAIR</a></li>
         </ul>
     </header>
-    <div class="Menu" id="Menu">
-        <div class="botaoMenu">CONQUISTAS</div>
-        <div class="botaoMenu">VER PERFIL</div>
-        <div class="botaoMenu">SAIR</div>
-    </div>
     <div class="parte1">
         <div class="descSistema">
             <h2 class="tutloSistema">O SISTEMA SOLAR</h2>
@@ -40,72 +33,80 @@
         <div class="imgSistema"></div>
     </div>
 
-        <div class="CaixaNiveis" id="Nivel1">
-            <div class="CaixaQuiz">
-                <button class="btnResponder">
-                INICIAR ATIVIDADE</button>
-            </div>
+    <div class="CaixaNiveis" id="Nivel1">
+        <h2 class="tituloNivel">NIVEL DA ATIVIDADE</h2>
+        <div class="CaixaQuiz">
+        </div>
+        <div class="CaixaEstudar">
+            <div class="Tentativas">
+                <div class="Tentativa" id="TentativaNumero">
+                    
+                    <div class="ResultadosBox">
+                        <h4><span id="Numero_questao">0</span>/10</h4>
+                        <div class="CaixaResultado" id="CaixaResultado0"></div>
+                        <div class="CaixaResultado" id="CaixaResultado1"></div>
+                        <div class="CaixaResultado" id="CaixaResultado2"></div>
+                        <div class="CaixaResultado" id="CaixaResultado3"></div>
+                        <div class="CaixaResultado" id="CaixaResultado4"></div>
+                        <div class="CaixaResultado" id="CaixaResultado5"></div>
+                        <div class="CaixaResultado" id="CaixaResultado6"></div>
+                        <div class="CaixaResultado" id="CaixaResultado7"></div>
+                        <div class="CaixaResultado" id="CaixaResultado8"></div>
+                        <div class="CaixaResultado" id="CaixaResultado9"></div>
+                    </div>
+                    <h3>PERGUNTA</h3>
 
-            <div class="CaixaQuiz">
-                <button class="btnResponder">
-                INICIAR ATIVIDADE</button>
-            </div>
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
 
-            <div class="CaixaQuiz">
-                <button class="btnResponder">
-                INICIAR ATIVIDADE</button>
+                    <button class="btnResponder desistir" id="Desistir" onclick="Desistir()">DESISTIR</button>
+                </div>
+            </div>
+            <div class="CaixaVideo">
+                <video src="../video/MINECRAFT EM 1 MINUTO.mp4" playsinline controls>
+                </video>
             </div>
         </div>
-        <div class="CaixaNiveis" id="Nivel2">
-            <div class="CaixaQuiz">
-                <button class="btnResponder">
-                    INICIAR ATIVIDADE</button>
-                </div>
-
-                <div class="CaixaQuiz">
-                <button class="btnResponder">
-                    INICIAR ATIVIDADE</button>
-                </div>
-
-                <div class="CaixaQuiz">
-                <button class="btnResponder">
-                    INICIAR ATIVIDADE</button>
-                </div>
+        <div class="CaixaQuiz">
         </div>
-        <div class="CaixaNiveis" id="Nivel3">
-            <div class="CaixaQuiz">
-                <button class="btnResponder">
-                INICIAR ATIVIDADE</button>
-            </div>
 
-            <div class="CaixaQuiz">
-                <button class="btnResponder">
-                INICIAR ATIVIDADE</button>
-            </div>
-
-            <div class="CaixaQuiz">
-                <button class="btnResponder">
-                INICIAR ATIVIDADE</button>
-            </div>
+        <div class="CaixaQuiz">
         </div>
+    </div>
+    <div class="CaixaNiveis" id="Nivel2">
+        <h2 class="tituloNivel">NIVEL DA ATIVIDADE</h2>
+        <div class="CaixaQuiz">
+        </div>
+
+        <div class="CaixaQuiz">
+        </div>
+
+        <div class="CaixaQuiz">
+        </div>
+    </div>
+    <div class="CaixaNiveis" id="Nivel3">
+        <h2 class="tituloNivel">NIVEL DA ATIVIDADE</h2>
+        <div class="CaixaQuiz">
+        </div>
+
+        <div class="CaixaQuiz">
+        </div>
+
+        <div class="CaixaQuiz">
+        </div>
+    </div>
 
     <footer>
-
+        <p><i>© Victor G. Santos 2020</i></p>
     </footer>
 </body>
 
 </html>
 
 <script>
-    var verMenu = document.getElementById("Menu");
-    verMenu.style.display = 'none';
-
-    function AbrirMenu() {
-        if (verMenu.style.display === 'block') {
-            verMenu.style.display = 'none';
-
-        } else {
-            verMenu.style.display = 'block';
-        }
+    function Sair() {
+        window.location.href = "index.html";
     }
 </script>
