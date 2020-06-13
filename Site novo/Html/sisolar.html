@@ -36,8 +36,9 @@
 
     <div class="CaixaNiveis" id="Nivel1">
         <h2 class="tituloNivel">FÁCIL</h2>
-        <div class="CaixaQuiz primeiro" id="CaixaQuiz0" onclick="CaixaEstudar02()">
-            <div id="LogoJogar" class="LogoJogar" >
+
+        <div class="CaixaQuiz primeiro" id="CaixaQuiz0" onclick="CaixaEstudar0()">
+            <div id="LogoJogar" class="LogoJogar">
                 <div class="ProntoJogar">
                     <span class="LogoJogo">
                         <i class="fas fa-gamepad fa-5x"></i>
@@ -51,7 +52,6 @@
         <div class="CaixaEstudar" id="CaixaEstudar0">
             <div class="Tentativas">
                 <div class="Tentativa" id="TentativaNumero">
-
                     <div class="ResultadosBox">
                         <h4><span id="Numero_questao">0</span>/10</h4>
                         <div class="CaixaResultado" id="CaixaResultado0"></div>
@@ -65,14 +65,14 @@
                         <div class="CaixaResultado" id="CaixaResultado8"></div>
                         <div class="CaixaResultado" id="CaixaResultado9"></div>
                     </div>
-                    <h3>PERGUNTA</h3>
+                    <h3>PERGUNTA 1</h3>
 
                     <button class="btnResponder" id="Resposta">XXXXX</button>
                     <button class="btnResponder" id="Resposta">XXXXX</button>
                     <button class="btnResponder" id="Resposta">XXXXX</button>
                     <button class="btnResponder" id="Resposta">XXXXX</button>
 
-                    <button class="btnResponder desistir" id="Desistir" onclick="Desistir()">DESISTIR</button>
+                    <button class="btnResponder desistir" id="Desistir" onclick="Desistir0()">DESISTIR</button>
                 </div>
             </div>
             <div class="CaixaVideo">
@@ -80,7 +80,8 @@
                 </video>
             </div>
         </div>
-        <div class="CaixaQuiz primeiro" id="CaixaQuiz1">
+        <!-- ----------------------------------------------------------------------------------- -->
+        <div class="CaixaQuiz primeiro" id="CaixaQuiz1"  onclick="CaixaEstudar1()">
             <div id="LogoJogar" class="LogoJogar">
                 <div class="ProntoJogar">
                     <span class="LogoJogo">
@@ -92,8 +93,39 @@
                 </div>
             </div>
         </div>
+        <div class="CaixaEstudar" id="CaixaEstudar1">
+            <div class="Tentativas">
+                <div class="Tentativa" id="TentativaNumero">
+                    <div class="ResultadosBox">
+                        <h4><span id="Numero_questao">0</span>/10</h4>
+                        <div class="CaixaResultado" id="CaixaResultado0"></div>
+                        <div class="CaixaResultado" id="CaixaResultado1"></div>
+                        <div class="CaixaResultado" id="CaixaResultado2"></div>
+                        <div class="CaixaResultado" id="CaixaResultado3"></div>
+                        <div class="CaixaResultado" id="CaixaResultado4"></div>
+                        <div class="CaixaResultado" id="CaixaResultado5"></div>
+                        <div class="CaixaResultado" id="CaixaResultado6"></div>
+                        <div class="CaixaResultado" id="CaixaResultado7"></div>
+                        <div class="CaixaResultado" id="CaixaResultado8"></div>
+                        <div class="CaixaResultado" id="CaixaResultado9"></div>
+                    </div>
+                    <h3>PERGUNTA 2</h3>
 
-        <div class="CaixaQuiz primeiro" id="CaixaQuiz2">
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+
+                    <button class="btnResponder desistir" id="Desistir" onclick="Desistir1()">DESISTIR</button>
+                </div>
+            </div>
+            <div class="CaixaVideo">
+                <video src="../video/MINECRAFT EM 1 MINUTO.mp4" playsinline controls>
+                </video>
+            </div>
+        </div>
+        <!-- ----------------------------------------------------------------------------------- -->
+        <div class="CaixaQuiz primeiro" id="CaixaQuiz2" onclick="CaixaEstudar2()">
             <div id="LogoJogar" class="LogoJogar">
                 <div class="ProntoJogar">
                     <span class="LogoJogo">
@@ -104,12 +136,44 @@
                     <br>
                     <p>E boa sorte ;)</p>
                 </div>
+            </div>
+        </div>
+        <div class="CaixaEstudar" id="CaixaEstudar2">
+            <div class="Tentativas">
+                <div class="Tentativa" id="TentativaNumero">
+                    <div class="ResultadosBox">
+                        <h4><span id="Numero_questao">0</span>/10</h4>
+                        <div class="CaixaResultado" id="CaixaResultado0"></div>
+                        <div class="CaixaResultado" id="CaixaResultado1"></div>
+                        <div class="CaixaResultado" id="CaixaResultado2"></div>
+                        <div class="CaixaResultado" id="CaixaResultado3"></div>
+                        <div class="CaixaResultado" id="CaixaResultado4"></div>
+                        <div class="CaixaResultado" id="CaixaResultado5"></div>
+                        <div class="CaixaResultado" id="CaixaResultado6"></div>
+                        <div class="CaixaResultado" id="CaixaResultado7"></div>
+                        <div class="CaixaResultado" id="CaixaResultado8"></div>
+                        <div class="CaixaResultado" id="CaixaResultado9"></div>
+                    </div>
+                    <h3>PERGUNTA 3</h3>
+
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+
+                    <button class="btnResponder desistir" id="Desistir" onclick="Desistir2()">DESISTIR</button>
+                </div>
+            </div>
+            <div class="CaixaVideo">
+                <video src="../video/MINECRAFT EM 1 MINUTO.mp4" playsinline controls>
+                </video>
             </div>
         </div>
     </div>
+    <!-- ----------------------------------------------------------------------------------- -->
     <div class="CaixaNiveis" id="Nivel2">
         <h2 class="tituloNivel">MÉDIO</h2>
-        <div class="CaixaQuiz" id="CaixaQuiz3">
+        <div class="CaixaQuiz" id="CaixaQuiz3" onclick="CaixaEstudar3()">
             <div id="LogoJogar" class="LogoJogar">
                 <div class="ProntoJogar">
                     <span class="LogoJogo">
@@ -121,7 +185,39 @@
                 </div>
             </div>
         </div>
-        <div class="CaixaQuiz" id="CaixaQuiz4">
+        <div class="CaixaEstudar" id="CaixaEstudar3">
+            <div class="Tentativas">
+                <div class="Tentativa" id="TentativaNumero">
+                    <div class="ResultadosBox">
+                        <h4><span id="Numero_questao">0</span>/10</h4>
+                        <div class="CaixaResultado" id="CaixaResultado0"></div>
+                        <div class="CaixaResultado" id="CaixaResultado1"></div>
+                        <div class="CaixaResultado" id="CaixaResultado2"></div>
+                        <div class="CaixaResultado" id="CaixaResultado3"></div>
+                        <div class="CaixaResultado" id="CaixaResultado4"></div>
+                        <div class="CaixaResultado" id="CaixaResultado5"></div>
+                        <div class="CaixaResultado" id="CaixaResultado6"></div>
+                        <div class="CaixaResultado" id="CaixaResultado7"></div>
+                        <div class="CaixaResultado" id="CaixaResultado8"></div>
+                        <div class="CaixaResultado" id="CaixaResultado9"></div>
+                    </div>
+                    <h3>PERGUNTA 4</h3>
+
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+
+                    <button class="btnResponder desistir" id="Desistir" onclick="Desistir3()">DESISTIR</button>
+                </div>
+            </div>
+            <div class="CaixaVideo">
+                <video src="../video/MINECRAFT EM 1 MINUTO.mp4" playsinline controls>
+                </video>
+            </div>
+        </div>
+        <!-- ----------------------------------------------------------------------------------- -->
+        <div class="CaixaQuiz" id="CaixaQuiz4" onclick="CaixaEstudar4()">
             <div id="LogoJogar" class="LogoJogar">
                 <div class="ProntoJogar">
                     <span class="LogoJogo">
@@ -133,7 +229,39 @@
                 </div>
             </div>
         </div>
-        <div class="CaixaQuiz" id="CaixaQuiz5">
+        <div class="CaixaEstudar" id="CaixaEstudar4">
+            <div class="Tentativas">
+                <div class="Tentativa" id="TentativaNumero">
+                    <div class="ResultadosBox">
+                        <h4><span id="Numero_questao">0</span>/10</h4>
+                        <div class="CaixaResultado" id="CaixaResultado0"></div>
+                        <div class="CaixaResultado" id="CaixaResultado1"></div>
+                        <div class="CaixaResultado" id="CaixaResultado2"></div>
+                        <div class="CaixaResultado" id="CaixaResultado3"></div>
+                        <div class="CaixaResultado" id="CaixaResultado4"></div>
+                        <div class="CaixaResultado" id="CaixaResultado5"></div>
+                        <div class="CaixaResultado" id="CaixaResultado6"></div>
+                        <div class="CaixaResultado" id="CaixaResultado7"></div>
+                        <div class="CaixaResultado" id="CaixaResultado8"></div>
+                        <div class="CaixaResultado" id="CaixaResultado9"></div>
+                    </div>
+                    <h3>PERGUNTA 5</h3>
+
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+
+                    <button class="btnResponder desistir" id="Desistir" onclick="Desistir4()">DESISTIR</button>
+                </div>
+            </div>
+            <div class="CaixaVideo">
+                <video src="../video/MINECRAFT EM 1 MINUTO.mp4" playsinline controls>
+                </video>
+            </div>
+        </div>
+        <!-- ----------------------------------------------------------------------------------- -->
+        <div class="CaixaQuiz" id="CaixaQuiz5" onclick="CaixaEstudar5()">
             <div id="LogoJogar" class="LogoJogar">
                 <div class="ProntoJogar">
                     <span class="LogoJogo">
@@ -143,12 +271,44 @@
                     <br>
                     <p>E boa sorte ;)</p>
                 </div>
+            </div>
+        </div>
+        <div class="CaixaEstudar" id="CaixaEstudar5">
+            <div class="Tentativas">
+                <div class="Tentativa" id="TentativaNumero">
+                    <div class="ResultadosBox">
+                        <h4><span id="Numero_questao">0</span>/10</h4>
+                        <div class="CaixaResultado" id="CaixaResultado0"></div>
+                        <div class="CaixaResultado" id="CaixaResultado1"></div>
+                        <div class="CaixaResultado" id="CaixaResultado2"></div>
+                        <div class="CaixaResultado" id="CaixaResultado3"></div>
+                        <div class="CaixaResultado" id="CaixaResultado4"></div>
+                        <div class="CaixaResultado" id="CaixaResultado5"></div>
+                        <div class="CaixaResultado" id="CaixaResultado6"></div>
+                        <div class="CaixaResultado" id="CaixaResultado7"></div>
+                        <div class="CaixaResultado" id="CaixaResultado8"></div>
+                        <div class="CaixaResultado" id="CaixaResultado9"></div>
+                    </div>
+                    <h3>PERGUNTA 6</h3>
+
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+
+                    <button class="btnResponder desistir" id="Desistir" onclick="Desistir5()">DESISTIR</button>
+                </div>
+            </div>
+            <div class="CaixaVideo">
+                <video src="../video/MINECRAFT EM 1 MINUTO.mp4" playsinline controls>
+                </video>
             </div>
         </div>
     </div>
+    <!-- ----------------------------------------------------------------------------------- -->
     <div class="CaixaNiveis" id="Nivel3">
         <h2 class="tituloNivel">DIFÍCIL</h2>
-        <div class="CaixaQuiz" id="CaixaQuiz6">
+        <div class="CaixaQuiz" id="CaixaQuiz6" onclick="CaixaEstudar6()">
             <div id="LogoJogar" class="LogoJogar">
                 <div class="ProntoJogar">
                     <span class="LogoJogo">
@@ -160,8 +320,39 @@
                 </div>
             </div>
         </div>
+        <div class="CaixaEstudar" id="CaixaEstudar6">
+            <div class="Tentativas">
+                <div class="Tentativa" id="TentativaNumero">
+                    <div class="ResultadosBox">
+                        <h4><span id="Numero_questao">0</span>/10</h4>
+                        <div class="CaixaResultado" id="CaixaResultado0"></div>
+                        <div class="CaixaResultado" id="CaixaResultado1"></div>
+                        <div class="CaixaResultado" id="CaixaResultado2"></div>
+                        <div class="CaixaResultado" id="CaixaResultado3"></div>
+                        <div class="CaixaResultado" id="CaixaResultado4"></div>
+                        <div class="CaixaResultado" id="CaixaResultado5"></div>
+                        <div class="CaixaResultado" id="CaixaResultado6"></div>
+                        <div class="CaixaResultado" id="CaixaResultado7"></div>
+                        <div class="CaixaResultado" id="CaixaResultado8"></div>
+                        <div class="CaixaResultado" id="CaixaResultado9"></div>
+                    </div>
+                    <h3>PERGUNTA 7</h3>
 
-        <div class="CaixaQuiz" id="CaixaQuiz7">
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+
+                    <button class="btnResponder desistir" id="Desistir" onclick="Desistir6()">DESISTIR</button>
+                </div>
+            </div>
+            <div class="CaixaVideo">
+                <video src="../video/MINECRAFT EM 1 MINUTO.mp4" playsinline controls>
+                </video>
+            </div>
+        </div>
+        <!-- ----------------------------------------------------------------------------------- -->
+        <div class="CaixaQuiz" id="CaixaQuiz7" onclick="CaixaEstudar7()">
             <div id="LogoJogar" class="LogoJogar">
                 <div class="ProntoJogar">
                     <span class="LogoJogo">
@@ -173,7 +364,39 @@
                 </div>
             </div>
         </div>
-        <div class="CaixaQuiz" id="CaixaQuiz8">
+        <div class="CaixaEstudar" id="CaixaEstudar7">
+            <div class="Tentativas">
+                <div class="Tentativa" id="TentativaNumero">
+                    <div class="ResultadosBox">
+                        <h4><span id="Numero_questao">0</span>/10</h4>
+                        <div class="CaixaResultado" id="CaixaResultado0"></div>
+                        <div class="CaixaResultado" id="CaixaResultado1"></div>
+                        <div class="CaixaResultado" id="CaixaResultado2"></div>
+                        <div class="CaixaResultado" id="CaixaResultado3"></div>
+                        <div class="CaixaResultado" id="CaixaResultado4"></div>
+                        <div class="CaixaResultado" id="CaixaResultado5"></div>
+                        <div class="CaixaResultado" id="CaixaResultado6"></div>
+                        <div class="CaixaResultado" id="CaixaResultado7"></div>
+                        <div class="CaixaResultado" id="CaixaResultado8"></div>
+                        <div class="CaixaResultado" id="CaixaResultado9"></div>
+                    </div>
+                    <h3>PERGUNTA 8</h3>
+
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+
+                    <button class="btnResponder desistir" id="Desistir" onclick="Desistir7()">DESISTIR</button>
+                </div>
+            </div>
+            <div class="CaixaVideo">
+                <video src="../video/MINECRAFT EM 1 MINUTO.mp4" playsinline controls>
+                </video>
+            </div>
+        </div>
+        <!-- ----------------------------------------------------------------------------------- -->
+        <div class="CaixaQuiz" id="CaixaQuiz8" onclick="CaixaEstudar8()">
             <div id="LogoJogar" class="LogoJogar">
                 <div class="ProntoJogar">
                     <span class="LogoJogo">
@@ -185,6 +408,38 @@
                 </div>
             </div>
         </div>
+        <div class="CaixaEstudar" id="CaixaEstudar8">
+            <div class="Tentativas">
+                <div class="Tentativa" id="TentativaNumero">
+                    <div class="ResultadosBox">
+                        <h4><span id="Numero_questao">0</span>/10</h4>
+                        <div class="CaixaResultado" id="CaixaResultado0"></div>
+                        <div class="CaixaResultado" id="CaixaResultado1"></div>
+                        <div class="CaixaResultado" id="CaixaResultado2"></div>
+                        <div class="CaixaResultado" id="CaixaResultado3"></div>
+                        <div class="CaixaResultado" id="CaixaResultado4"></div>
+                        <div class="CaixaResultado" id="CaixaResultado5"></div>
+                        <div class="CaixaResultado" id="CaixaResultado6"></div>
+                        <div class="CaixaResultado" id="CaixaResultado7"></div>
+                        <div class="CaixaResultado" id="CaixaResultado8"></div>
+                        <div class="CaixaResultado" id="CaixaResultado9"></div>
+                    </div>
+                    <h3>PERGUNTA 9</h3>
+
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+                    <button class="btnResponder" id="Resposta">XXXXX</button>
+
+                    <button class="btnResponder desistir" id="Desistir" onclick="Desistir8()">DESISTIR</button>
+                </div>
+            </div>
+            <div class="CaixaVideo">
+                <video src="../video/MINECRAFT EM 1 MINUTO.mp4" playsinline controls>
+                </video>
+            </div>
+        </div>
+        <!-- ----------------------------------------------------------------------------------- -->
     </div>
 
     <footer>
@@ -194,21 +449,9 @@
 
 </html>
 
+<script src="../Js/MostrarQuiz.js"></script>
 <script>
     function Sair() {
         window.location.href = "index.html";
-    }
-
-    function CaixaEstudar02() {
-        var Box0 = document.getElementById('CaixaQuiz0');
-        var Box1 = document.getElementById('CaixaQuiz1');
-        var Box2 = document.getElementById('CaixaQuiz2');
-        var BoxQuiz = document.getElementById('CaixaEstudar0');
-
-        Box0.style.display = 'none';
-        Box1.style.display = 'none';
-        Box2.style.display = 'none';
-        BoxQuiz.style.display = 'inline-flex';
-
     }
 </script>

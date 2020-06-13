@@ -134,6 +134,38 @@ ul{
     display: none;
 }
 
+#CaixaEstudar1{
+    display: none;
+}
+
+#CaixaEstudar2{
+    display: none;
+}
+
+#CaixaEstudar3{
+    display: none;
+}
+
+#CaixaEstudar4{
+    display: none;
+}
+
+#CaixaEstudar5{
+    display: none;
+}
+
+#CaixaEstudar6{
+    display: none;
+}
+
+#CaixaEstudar7{
+    display: none;
+}
+
+#CaixaEstudar8{
+    display: none;
+}
+
 /* .CaixaQuiz:hover{
     background-color: rgba(0, 0, 0, 0.534)
 } */
