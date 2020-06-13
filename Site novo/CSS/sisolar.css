@@ -126,13 +126,55 @@ ul{
     width: 23%;
     height: 86%;
     background: gray;
-    display: none;
+    display: inline-flex;
 }
 
+/* .CaixaQuiz:hover{
+    background-color: rgba(0, 0, 0, 0.534)
+} */
+.LogoJogar{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.5s ease-in;
+    background: rgba(0, 0, 0, 0.900);
+    cursor: pointer;
+}
+
+.LogoJogar:hover{
+    opacity: 1;
+}
+
+.LogoJogo{
+ border-radius: 50%;
+ border: white solid 2px;
+}
+
+.fas{
+    position: relative;
+    animation: mymove 3.3s infinite ease;
+    transition: 1s ease-in;
+}
+
+@keyframes mymove {
+ 0%   {top: 0px;}
+ 25%  {top: -20px;}
+ 50%  {top: 0px;}
+ 75%  {top: -20px;}
+ 100% {top: 0px;}
+}
+
+.ProntoJogar{
+    width: 90%;
+    height: 90%;
+    margin-top: 20%;
+    margin-left: 5%;
+}
 .CaixaEstudar{
     width: 99.89%;
     height: 100%;
-    display: inline-flex;
+    /* display: inline-flex; */
+    display: none;
 }
 
 .Tentativas{
