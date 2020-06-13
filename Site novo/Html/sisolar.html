@@ -36,8 +36,8 @@
 
     <div class="CaixaNiveis" id="Nivel1">
         <h2 class="tituloNivel">FÁCIL</h2>
-        <div class="CaixaQuiz" id="CaixaQuiz0" onclick="CaixaEstudar0()">
-            <div id="LogoJogar" class="LogoJogar">
+        <div class="CaixaQuiz primeiro" id="CaixaQuiz0" onclick="CaixaEstudar02()">
+            <div id="LogoJogar" class="LogoJogar" >
                 <div class="ProntoJogar">
                     <span class="LogoJogo">
                         <i class="fas fa-gamepad fa-5x"></i>
@@ -80,7 +80,7 @@
                 </video>
             </div>
         </div>
-        <div class="CaixaQuiz" id="CaixaQuiz">
+        <div class="CaixaQuiz primeiro" id="CaixaQuiz1">
             <div id="LogoJogar" class="LogoJogar">
                 <div class="ProntoJogar">
                     <span class="LogoJogo">
@@ -93,7 +93,7 @@
             </div>
         </div>
 
-        <div class="CaixaQuiz" id="CaixaQuiz">
+        <div class="CaixaQuiz primeiro" id="CaixaQuiz2">
             <div id="LogoJogar" class="LogoJogar">
                 <div class="ProntoJogar">
                     <span class="LogoJogo">
@@ -109,7 +109,7 @@
     </div>
     <div class="CaixaNiveis" id="Nivel2">
         <h2 class="tituloNivel">MÉDIO</h2>
-        <div class="CaixaQuiz" id="CaixaQuiz">
+        <div class="CaixaQuiz" id="CaixaQuiz3">
             <div id="LogoJogar" class="LogoJogar">
                 <div class="ProntoJogar">
                     <span class="LogoJogo">
@@ -121,7 +121,7 @@
                 </div>
             </div>
         </div>
-        <div class="CaixaQuiz" id="CaixaQuiz">
+        <div class="CaixaQuiz" id="CaixaQuiz4">
             <div id="LogoJogar" class="LogoJogar">
                 <div class="ProntoJogar">
                     <span class="LogoJogo">
@@ -133,7 +133,7 @@
                 </div>
             </div>
         </div>
-        <div class="CaixaQuiz" id="CaixaQuiz">
+        <div class="CaixaQuiz" id="CaixaQuiz5">
             <div id="LogoJogar" class="LogoJogar">
                 <div class="ProntoJogar">
                     <span class="LogoJogo">
@@ -148,7 +148,7 @@
     </div>
     <div class="CaixaNiveis" id="Nivel3">
         <h2 class="tituloNivel">DIFÍCIL</h2>
-        <div class="CaixaQuiz" id="CaixaQuiz">
+        <div class="CaixaQuiz" id="CaixaQuiz6">
             <div id="LogoJogar" class="LogoJogar">
                 <div class="ProntoJogar">
                     <span class="LogoJogo">
@@ -161,7 +161,7 @@
             </div>
         </div>
 
-        <div class="CaixaQuiz" id="CaixaQuiz">
+        <div class="CaixaQuiz" id="CaixaQuiz7">
             <div id="LogoJogar" class="LogoJogar">
                 <div class="ProntoJogar">
                     <span class="LogoJogo">
@@ -173,7 +173,7 @@
                 </div>
             </div>
         </div>
-        <div class="CaixaQuiz" id="CaixaQuiz">
+        <div class="CaixaQuiz" id="CaixaQuiz8">
             <div id="LogoJogar" class="LogoJogar">
                 <div class="ProntoJogar">
                     <span class="LogoJogo">
@@ -199,8 +199,16 @@
         window.location.href = "index.html";
     }
 
-    function CaixaEstudar0(){
-        let CaixaPergunta = document.getElementById('CaixaEstudar0').style.display;
-        let CaixaSelecionada = document.getElementById('CaixaQuiz0').style.display;
+    function CaixaEstudar02() {
+        var Box0 = document.getElementById('CaixaQuiz0');
+        var Box1 = document.getElementById('CaixaQuiz1');
+        var Box2 = document.getElementById('CaixaQuiz2');
+        var BoxQuiz = document.getElementById('CaixaEstudar0');
+
+        Box0.style.display = 'none';
+        Box1.style.display = 'none';
+        Box2.style.display = 'none';
+        BoxQuiz.style.display = 'inline-flex';
+
     }
 </script>

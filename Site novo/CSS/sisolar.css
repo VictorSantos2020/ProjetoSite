@@ -129,6 +129,11 @@ ul{
     display: inline-flex;
 }
 
+
+#CaixaEstudar0{
+    display: none;
+}
+
 /* .CaixaQuiz:hover{
     background-color: rgba(0, 0, 0, 0.534)
 } */
@@ -174,7 +179,6 @@ ul{
     width: 99.89%;
     height: 100%;
     /* display: inline-flex; */
-    display: none;
 }
 
 .Tentativas{
