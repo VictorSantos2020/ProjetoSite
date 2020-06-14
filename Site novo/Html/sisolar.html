@@ -53,7 +53,7 @@
             <div class="Tentativas">
                 <div class="Tentativa" id="TentativaNumero">
                     <div class="ResultadosBox">
-                        <h4><span id="Numero_questao">0</span>/10</h4>
+                        <h4><span id="Numero_questao"></span>/10</h4>
                         <div class="CaixaResultado" id="CaixaResultado0"></div>
                         <div class="CaixaResultado" id="CaixaResultado1"></div>
                         <div class="CaixaResultado" id="CaixaResultado2"></div>
@@ -67,11 +67,18 @@
                     </div>
                     <h3>PERGUNTA 1</h3>
 
-                    <button class="btnResponder" id="Resposta">XXXXX</button>
-                    <button class="btnResponder" id="Resposta">XXXXX</button>
-                    <button class="btnResponder" id="Resposta">XXXXX</button>
-                    <button class="btnResponder" id="Resposta">XXXXX</button>
-
+                    <div class="Perguntas" id="Perguntas1">
+                        <button class="btnResponder" id="RespostaF11" onclick="Resposta()">XXXXX</button>
+                        <button class="btnResponder" id="RespostaF12" onclick="Resposta()">XXXXX</button>
+                        <button class="btnResponder" id="RespostaF13" onclick="Resposta()">XXXXX</button>
+                        <button class="btnResponder" id="RespostaF14" onclick="Resposta()">XXXXX</button>
+                    </div>
+                    <div class="Perguntas" id="Perguntas2" style="visibility:hidden">
+                        <button class="btnResponder" id="RespostaF15" onclick="Resposta()">YYYYY</button>
+                        <button class="btnResponder" id="RespostaF16" onclick="Resposta()">YYYYY</button>
+                        <button class="btnResponder" id="RespostaF17" onclick="Resposta()">YYYYY</button>
+                        <button class="btnResponder" id="RespostaF18" onclick="Resposta()">YYYYY</button>
+                    </div>
                     <button class="btnResponder desistir" id="Desistir" onclick="Desistir0()">DESISTIR</button>
                 </div>
             </div>
@@ -81,7 +88,7 @@
             </div>
         </div>
         <!-- ----------------------------------------------------------------------------------- -->
-        <div class="CaixaQuiz primeiro" id="CaixaQuiz1"  onclick="CaixaEstudar1()">
+        <div class="CaixaQuiz primeiro" id="CaixaQuiz1" onclick="CaixaEstudar1()">
             <div id="LogoJogar" class="LogoJogar">
                 <div class="ProntoJogar">
                     <span class="LogoJogo">
@@ -453,5 +460,24 @@
 <script>
     function Sair() {
         window.location.href = "index.html";
+    }
+</script>
+
+<script>
+
+    NQuestao = Number(Numero_questao.innerHTML);
+
+    function Resposta() {
+        let contador = 1;
+        
+
+        
+        NQuestao.innerHTML = `${contador}`;
+
+        Questionario = document.getElementsByClassName('Perguntas');
+        Resposta_quiz = document.getElementById(`Perguntas${contador}`);
+        Questionario.style.visibility = 'hidden';
+        Resposta_quiz.style.display = 'visible';
+        contador ++;
     }
 </script>

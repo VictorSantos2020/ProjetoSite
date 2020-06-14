@@ -7,6 +7,7 @@ var Box5 = document.getElementById('CaixaQuiz5');
 var Box6 = document.getElementById('CaixaQuiz6');
 var Box7 = document.getElementById('CaixaQuiz7');
 var Box8 = document.getElementById('CaixaQuiz8');
+/* ----------------------------------------------------------------------------------- */
 var BoxQuiz0 = document.getElementById('CaixaEstudar0');
 var BoxQuiz1 = document.getElementById('CaixaEstudar1');
 var BoxQuiz2 = document.getElementById('CaixaEstudar2');
