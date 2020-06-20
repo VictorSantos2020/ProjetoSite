@@ -26,18 +26,18 @@ function CaixaEstudar0() {
 }
 
 function Desistir0() {
+    Box0.style.display = 'inline-flex';
+    Box1.style.display = 'inline-flex';
+    Box2.style.display = 'inline-flex';
+    BoxQuiz0.style.display = 'none';  
+    
     contador = 1;
     contador2 = 0;
     Certa_resposta = 0;
     Errada_resposta = 0;
-    Box0.style.display = 'inline-flex';
-    Box1.style.display = 'inline-flex';
-    Box2.style.display = 'inline-flex';
-    BoxQuiz0.style.display = 'none';
     Resposta_quiz.style.display = 'none';
     document.getElementById(`Perguntas1`).style.display = 'block';
     NQuestao.innerHTML = `${contador}`;
-    
 }
 /* ----------------------------------------------------------------------------------- */
 function CaixaEstudar1() {
@@ -52,6 +52,14 @@ function Desistir1() {
     Box1.style.display = 'inline-flex';
     Box2.style.display = 'inline-flex';
     BoxQuiz1.style.display = 'none';
+    
+    contador = 1;
+    contador2 = 0;
+    Certa_resposta = 0;
+    Errada_resposta = 0;
+    Resposta_quiz.style.display = 'none';
+    document.getElementById(`Perguntas1_segundo`).style.display = 'block';
+    NQuestao_segundo.innerHTML = `${contador}`;    
 }
     /* ----------------------------------------------------------------------------------- */
     function CaixaEstudar2() {
@@ -66,6 +74,14 @@ function Desistir2() {
     Box1.style.display = 'inline-flex';
     Box2.style.display = 'inline-flex';
     BoxQuiz2.style.display = 'none';
+
+    contador = 1;
+    contador2 = 0;
+    Certa_resposta = 0;
+    Errada_resposta = 0;
+    Resposta_quiz.style.display = 'none';
+    document.getElementById(`Perguntas1_terceiro`).style.display = 'block';
+    NQuestao_Terceiro.innerHTML = `${contador}`; 
 }
 
  /* ----------------------------------------------------------------------------------- */
