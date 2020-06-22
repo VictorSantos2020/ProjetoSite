@@ -50,12 +50,10 @@
         </div>
         <div class="cadastro" id="Cadastro">
             <form action="" id="frmCadastro" method="post" onsubmit="return cadastrar()">
-                <h2 class="tituloCadastro">NOME COMPLETO</h2>
-                <input type="text" id="txtNomeCompleto"  name="nome" class="txtLogin">
                 <h2 class="tituloCadastro">NOME DE USUARIO</h2>
-                <input type="text" id="txtNomeUser" name="login" class="txtLogin">
+                <input type="text" id="txtNomeUser" name="nome" class="txtLogin">
                 <h2 class="tituloCadastro">EMAIL</h2>
-                <input type="email" id="txtEmail" class="txtLogin">
+                <input type="email" id="txtEmail" name="login" class="txtLogin">
                 <h2 class="tituloCadastro">SENHA</h2>
                 <input type="password" id="txtCriarSenha" name="senha" onkeyup="ValidarSenha()" class="txtLogin">
                 <span class="pop-up" id="pop-up">A SENHA DEVE CONTER: <br>
@@ -64,7 +62,7 @@
                     <span class="tarefas" id="tarefa3">1 numero.</span><br>
                 </span>
                 <br>
-                <button class="btnEntrar" id="btnCadastro">CONFIRMAR</button>
+                <button class="btnEntrar" id="btnCadastro" disabled>CONFIRMAR</button>
                 <div id="div_erro"></div>
             </form>
         </div>
@@ -173,8 +171,8 @@
     //         popupBox.style.display = 'block';
     //     }
     // }
-
     function ValidarSenha() {
+
         var RecebeSenha = document.getElementById('txtCriarSenha').value;
         var Validar0 = RecebeSenha.indexOf('0') >= 0;
         var Validar1 = RecebeSenha.indexOf('1') >= 0;
@@ -197,12 +195,10 @@
             }
             else {
                 document.getElementById('tarefa1').style.color = 'red';
-                document.getElementById('btnCadastro').disabled = true;
             }
         }
         else {
             document.getElementById('tarefa3').style.color = 'red';
-            document.getElementById('btnCadastro').disabled = true;
         }
     }
 
