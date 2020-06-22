@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="CSS/index.css">
     <title>HOME</title>
 </head>
 
@@ -49,22 +49,23 @@
             </form>
         </div>
         <div class="cadastro" id="Cadastro">
-            <form action="">
+            <form action="" id="frmCadastro" method="post" onsubmit="return cadastrar()">
                 <h2 class="tituloCadastro">NOME COMPLETO</h2>
-                <input type="text" id="txtNomeCompleto" class="txtLogin">
+                <input type="text" id="txtNomeCompleto"  name="nome" class="txtLogin">
                 <h2 class="tituloCadastro">NOME DE USUARIO</h2>
-                <input type="text" id="txtNomeUser" class="txtLogin">
+                <input type="text" id="txtNomeUser" name="login" class="txtLogin">
                 <h2 class="tituloCadastro">EMAIL</h2>
                 <input type="email" id="txtEmail" class="txtLogin">
                 <h2 class="tituloCadastro">SENHA</h2>
-                <input type="password" id="txtCriarSenha" onkeyup="ValidarSenha()" class="txtLogin">
+                <input type="password" id="txtCriarSenha" name="senha" onkeyup="ValidarSenha()" class="txtLogin">
                 <span class="pop-up" id="pop-up">A SENHA DEVE CONTER: <br>
                     NO MINIMO: <br><br>
                     <span class="tarefas" id="tarefa1">6 caracteres.</span><br>
                     <span class="tarefas" id="tarefa3">1 numero.</span><br>
                 </span>
                 <br>
-                <button onclick="Validar()" class="btnEntrar" id="btnCadastro">CONFIRMAR</button>
+                <button class="btnEntrar" id="btnCadastro">CONFIRMAR</button>
+                <div id="div_erro"></div>
             </form>
         </div>
     </div>
@@ -204,4 +205,26 @@
             document.getElementById('btnCadastro').disabled = true;
         }
     }
+
+    function cadastrar() {
+        var formulario = new URLSearchParams(new FormData(frmCadastro));
+            fetch("/usuarios/cadastro", {
+                method: "POST",
+                body: formulario
+            }).then(function (response) {
+
+                if (response.ok) {
+
+                    window.location.href = 'sisolar.html';
+
+                } else {
+
+                    console.log('Erro de cadastro!');
+                    response.text().then(function (resposta) {
+                        div_erro.innerHTML = resposta;
+                    });
+                }
+            });
+            return false;
+        }
 </script>

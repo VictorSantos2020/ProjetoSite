@@ -288,3 +288,21 @@ footer{
     height: 30px;
     text-align: center;
 }
+
+.pontuacao{
+    height: 360px;
+    display: inline-block;
+}
+
+.Correct{
+    height: 50%;
+
+}
+
+.Incorrect{
+    height: 50%;
+    display: inline-block;
+    float: left;
+    margin-left: -40%;
+    margin-top: 50%;
+}
