@@ -30,7 +30,7 @@ let Resposta_quiz;
 function Proxima0() {
     NQuestao.innerHTML = `${++contador}`;
 
-    let Questionario = document.getElementsByClassName('Perguntas')[++contador2];
+    let Questionario = document.getElementsByClassName('Perguntas')[contador2++];
     Resposta_quiz = document.getElementById(`Perguntas${contador}`);
     let Pontuacao_quiz = document.getElementById("Pontuacao");
     let BoxEstudar = document.getElementById('CaixaEstudar0');
@@ -67,7 +67,7 @@ function Proxima0() {
 function Proxima1() {
     NQuestao_segundo.innerHTML = `${++contador}`;
     contador_segundo++;
-    let Questionario = document.getElementsByClassName('Perguntas_segunda')[++contador2];
+    let Questionario = document.getElementsByClassName('Perguntas_segunda')[contador2++];
     Resposta_quiz = document.getElementById(`Perguntas${contador}_segundo`);
     let Pontuacao_quiz = document.getElementById("Pontuacao_segundo");
     let BoxEstudar = document.getElementById('CaixaEstudar1');
@@ -174,7 +174,7 @@ function Proxima3() {
 function Proxima4() {
     NQuestao_quinto.innerHTML = `${++contador}`;
     contador_quinto++;
-    let Questionario = document.getElementsByClassName('Perguntas_quinto')[++contador2];
+    let Questionario = document.getElementsByClassName('Perguntas_quinto')[contador2++];
     Resposta_quiz = document.getElementById(`Perguntas${contador}_quinto`);
     let Pontuacao_quiz = document.getElementById("Pontuacao_quinto");
     let BoxEstudar = document.getElementById('CaixaEstudar4');

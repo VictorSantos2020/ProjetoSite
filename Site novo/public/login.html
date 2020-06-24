@@ -17,7 +17,7 @@
         </ul>
         <div class="headerDesc">
             <h1>SEJA BEM-VINDO AO UNIVERSO VS</h1>
-            <p>Aqui você irá aprender sobre nosso sistema solar</p>
+            <p>Aqui você irá aprender sobre nosso universo.</p>
         </div>
     </header>
 
@@ -25,9 +25,9 @@
         <div class="imgSobre"></div>
         <div class="descSobre" id="descSobre1">
             <h2>PLANETAS, ESTRELAS, E OUTROS</h2>
-            <p>O projeto foi criado por Victor G. Santos para todos aprenderem sobre o sistema solar e seus
+            <p>O projeto foi criado por Victor G. Santos para todos aprenderem sobre o universo e seus
                 componentes,
-                Vamos fazer isso da forma mais divertida e simples.
+                Tire alguns minutos e venha se divertir
             </p>
         </div>
     </div>
@@ -62,6 +62,15 @@
                     <span class="tarefas" id="tarefa3">1 numero.</span><br>
                 </span>
                 <br>
+                <br>
+                <input type="radio" name="foto" id="" value="1" checked>1
+                <input type="radio" name="foto" id="" value="2">2
+                <input type="radio" name="foto" id="" value="3">3
+                <br>
+                <br>
+                <input type="number" value="0" name="acertos" style="display: none" class="txtLogin">
+                <input type="number" value="0" name="erros" style="display: none" class="txtLogin">
+                <input type="number" value="0" name="tentativa" style="display: none" class="txtLogin">
                 <button class="btnEntrar" id="btnCadastro" disabled>CONFIRMAR</button>
                 <div id="div_erro"></div>
             </form>
@@ -111,35 +120,39 @@
     }
 
     function entrar() {
-            var formulario = new URLSearchParams(new FormData(frmLogin));
-            fetch("/usuarios/autenticar", {
-                method: "POST",
-                body: formulario
-            }).then(resposta => {
+        var formulario = new URLSearchParams(new FormData(frmLogin));
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(resposta => {
 
-                if (resposta.ok) {
+            if (resposta.ok) {
 
-                    resposta.json().then(json => {
+                resposta.json().then(json => {
 
-                        sessionStorage.login_usuario_meuapp = json.nmUsuario;
-                        sessionStorage.nome_usuario_meuapp = json.nmUsuario;
+                    sessionStorage.login_usuario_meuapp = json.nmUsuario;
+                    sessionStorage.nome_usuario_meuapp = json.nmUsuario;
+                    sessionStorage.foto_usuario_meuapp = json.fotoUsuario;
+                    sessionStorage.acertos_usuario_meuapp = json.acertoUsuario;
+                    sessionStorage.erros_usuario_meuapp = json.erroUsuario;
+                    sessionStorage.tent_usuario_meuapp = json.tentUsuario;
+                    
+                    window.location.href = 'sisolar.html';
+                });
 
-                        window.location.href = 'sisolar.html';
-                    });
+            } else {
 
-                } else {
+                console.log('Erro de login!');
+                c.style.display = 'block';
+                document.getElementById('btnEntrar').style.marginTop = '0%';
+                response.text().then(texto => {
+                    console.error(texto);
+                    finalizar_aguardar(texto);
+                });
+            }
+        });
 
-                    console.log('Erro de login!');
-                    c.style.display = 'block';
-                    document.getElementById('btnEntrar').style.marginTop = '0%';
-                    response.text().then(texto => {
-                        console.error(texto);
-                        finalizar_aguardar(texto);
-                    });
-                }
-            });
-
-            return false;
+        return false;
     }
 
 
@@ -204,23 +217,23 @@
 
     function cadastrar() {
         var formulario = new URLSearchParams(new FormData(frmCadastro));
-            fetch("/usuarios/cadastro", {
-                method: "POST",
-                body: formulario
-            }).then(function (response) {
+        fetch("/usuarios/cadastro", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
 
-                if (response.ok) {
+            if (response.ok) {
 
-                    window.location.href = 'sisolar.html';
+                window.location.href = 'sisolar.html';
 
-                } else {
+            } else {
 
-                    console.log('Erro de cadastro!');
-                    response.text().then(function (resposta) {
-                        div_erro.innerHTML = resposta;
-                    });
-                }
-            });
-            return false;
-        }
+                console.log('Erro de cadastro!');
+                response.text().then(function (resposta) {
+                    div_erro.innerHTML = resposta;
+                });
+            }
+        });
+        return false;
+    }
 </script>

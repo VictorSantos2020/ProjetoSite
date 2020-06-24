@@ -1,3 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap');
+
+*{
+    font-family: 'IBM Plex Mono', monospace;
+    color: white;  
+}
+
 body{
     background: black;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.itemMenu{
+    display: inline-flex;
+    margin-left: 23%;
+    margin-top: 0%;
+}
+
+.itemMenu a{
+    text-decoration: none;
+    transition: 0.2s step-end;
+    opacity: 0.5;
+    color: white;
+    cursor: pointer;
+}
+
+.itemMenu:nth-child(3){
+    margin-left: 40%;
+}
+
+#aMenu{
+    cursor: pointer;
+}
+
+.itemMenu a:hover{
+    opacity: 1;
+}
+
+.informacoes{
+    width: 25%;
+    height: 548px;
+    margin-top: 2%;
+    text-align: center;
+    background-color: rgba(41, 41, 41, 0.303);
+    float: left;
+}
+
+.Foto_perfil{
+    margin: 30px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.info_nome{
+    margin-top: 30%;
+}
+
+.Detalhes{
+    width: 20%;
+    height: 130px;
+    display: inline-block;
+    border: 1px solid white;
+    /* float: left; */
+    margin-left: 3%;
+    margin-top: 15%;
+    border-radius: 5%;
+    text-align: center;
+}
+
+.total{
+    
+}
+
+footer{
+    width: 99.85%;
+    height: 30px;
+    text-align: center;
+    float: right;
 }

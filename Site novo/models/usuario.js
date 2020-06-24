@@ -27,6 +27,26 @@ module.exports = (sequelize, DataTypes) => {
 			field: 'senhaUsuario',
 			type: DataTypes.STRING,
 			allowNull: false
+		},
+		foto: {
+			field: 'fotoUsuario',
+			type: DataTypes.INTEGER,
+			allowNull: false
+		},
+		acertos: {
+			field: 'acertoUsuario',
+			type: DataTypes.INTEGER,
+			allowNull: false
+		},
+		erros: {
+			field: 'erroUsuario',
+			type: DataTypes.INTEGER,
+			allowNull: false
+		},
+		tentativa: {
+			field: 'tentUsuario',
+			type: DataTypes.INTEGER,
+			allowNull: false
 		}
 	}, 
 	{
